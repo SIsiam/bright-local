@@ -2,7 +2,7 @@ import React from 'react';
 import Link from "next/link";
 import Image from "next/image";
 
-const nav = () => {
+const Nav = () => {
     return (
         <div className="navigation">
             <div className="topnav" id="myTopnav">
@@ -42,4 +42,4 @@ const nav = () => {
     );
 };
 
-export default nav;
+export default Nav;

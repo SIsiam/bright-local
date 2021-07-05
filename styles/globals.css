@@ -1,10 +1,12 @@
 body {
     margin: 0;
-    /* font-family: Arial, Helvetica, sans-serif; */
     font-family: 'source sans pro',sans-serif;
-
+    font-family: 'camphor w01 heavy,helveticaneue-bold',Helvetica,arial bold,Arial,sans-serif;
+    color: #252d13;
   }
-
+  * {
+    box-sizing: border-box;
+  }
    .Header-container {
       margin-right: 10%;
       margin-left: 10%;
@@ -137,9 +139,7 @@ body {
   padding: 10px;
 }
 
-* {
-	box-sizing: border-box;
-}
+
 .checkbox {
 	opacity: 0;
 	position: absolute;

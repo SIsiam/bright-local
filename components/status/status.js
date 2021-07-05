@@ -1,6 +1,6 @@
 import React from 'react';
 import style from "../../styles/status.module.css";
-import ceo from "../../images/seoImg/ceo.png";
+import ceo from "../../images/ceo.png";
 import Link from "next/link";
 import Image from "next/image";
 import { urlFor } from "../../lib/sanity";

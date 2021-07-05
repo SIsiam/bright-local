@@ -10,6 +10,9 @@ import third from "./third";
 import fourth from "./fourth";
 import five from "./five";
 import six from "./six";
+import cost from "./cost";
+import medel from "./medel";
+import footer from "./footer";
 // Then import schema types from any plugins that might expose them
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
@@ -31,6 +34,9 @@ export default createSchema({
     third,
     fourth,
     five,
-    six
+    six,
+    cost,
+    medel,
+    footer,
   ]),
 })

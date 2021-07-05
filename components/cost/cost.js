@@ -1,19 +1,13 @@
 import React from 'react';
-import { useState } from 'react';
 import TableStyle from "../../styles/cost.module.css";
 import Image from "next/image";
+import { urlFor } from "../../lib/sanity";
 
-const Cost = () => {
-
-    const [click, setClick] = useState(null);
-
-    const buttonClick = () => {
-
-    }
-
-
+const Cost = ({ cost }) => {
     return (
-        <div style={{ margin: "150px 80px 600px 80px" }}>
+        <div style={{ margin: "0px 80px 600px 80px" }}>
+
+
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', margin: '20px' }}>
                 <h1>The most complete and cost-effective set of tools to tackle local SEO</h1>
                 <h4>From just $1.50 per location per month!</h4>
@@ -24,7 +18,7 @@ const Cost = () => {
 
                 <input type="checkbox" className="checkbox" id="chk" />
                 <label className="label" htmlFor="chk">
-                    <div onClick={buttonClick} className="ball"></div>
+                    <div className="ball"></div>
                 </label>
             </div>
 
@@ -48,217 +42,222 @@ const Cost = () => {
                                 </tr>
                             </thead>
 
-                            <tbody>
+                            {
+                                cost.map((costs) => (
+                                    <tbody key={costs._id}>
 
-                                <tr className="row-2 even">
-                                    <td className="column-1">BrightLocal</td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                </tr>
-                                <tr className="row-2 even">
-                                    <td className="column-1">Moz Local</td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/cross.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1717" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/cross.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1717" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/cross.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1717" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/cross.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1717" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/cross.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1717" />
-                                    </td>
-                                </tr>
+                                        <tr className="row-2 even">
+                                            <td className="column-1">BrightLocal</td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="Picture of the author" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="Picture of the author" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="Picture of the author" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="Picture of the author" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="Picture of the author" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="Picture of the author" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="Picture of the author" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="Picture of the author" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="Picture of the author" />
+                                            </td>
+                                        </tr>
 
 
-
-                                <tr className="row-2 even">
-                                    <td className="column-1">Yext</td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/cross.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1717" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/cross.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1717" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/cross.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1717" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/cross.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1717" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                </tr>
+                                        <tr className="row-2 even">
+                                            <td className="column-1">Moz Local</td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.crossImg).url()} width={22} height={22} alt="Picture the cross" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.crossImg).url()} width={22} height={22} alt="Picture the cross" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.crossImg).url()} width={22} height={22} alt="Picture the cross" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.crossImg).url()} width={22} height={22} alt="Picture the cross" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.crossImg).url()} width={22} height={22} alt="Picture the cross" />
+                                            </td>
+                                        </tr>
 
 
 
-                                <tr className="row-2 even">
-                                    <td className="column-1">Whitespark</td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/cross.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1717" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/cross.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1717" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/cross.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1717" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/cross.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1717" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/cross.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1717" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                </tr>
+                                        <tr className="row-2 even">
+                                            <td className="column-1">Yext</td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.crossImg).url()} width={22} height={22} alt="Picture the cross" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.crossImg).url()} width={22} height={22} alt="Picture the cross" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.crossImg).url()} width={22} height={22} alt="Picture the cross" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.crossImg).url()} width={22} height={22} alt="Picture the cross" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                        </tr>
 
 
-                                <tr className="row-2 even">
-                                    <td className="column-1">Synup</td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/cross.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1717" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/cross.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1717" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                </tr>
+
+                                        <tr className="row-2 even">
+                                            <td className="column-1">Whitespark</td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.crossImg).url()} width={22} height={22} alt="Picture the cross" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.crossImg).url()} width={22} height={22} alt="Picture the cross" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.crossImg).url()} width={22} height={22} alt="Picture the cross" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.crossImg).url()} width={22} height={22} alt="Picture the cross" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.crossImg).url()} width={22} height={22} alt="Picture the cross" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                        </tr>
 
 
-                                <tr className="row-2 even">
-                                    <td className="column-1">Tribe Local</td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/cross.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1717" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/cross.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1717" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/cross.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1717" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                    <td className="column-2">
-                                        <Image src="https://www.brightlocal.com/wp-content/uploads/2018/11/tick.png" alt="" width={22} height={22} className="alignnone size-full wp-image-1716" />
-                                    </td>
-                                </tr>
-                            </tbody>
+                                        <tr className="row-2 even">
+                                            <td className="column-1">Synup</td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.crossImg).url()} width={22} height={22} alt="Picture the cross" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.crossImg).url()} width={22} height={22} alt="Picture the cross" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                        </tr>
+
+
+                                        <tr className="row-2 even">
+                                            <td className="column-1">Tribe Local</td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.crossImg).url()} width={22} height={22} alt="Picture the cross" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.crossImg).url()} width={22} height={22} alt="Picture the cross" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.crossImg).url()} width={22} height={22} alt="Picture the cross" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                            <td className="column-2">
+                                                <Image src={urlFor(costs?.image).url()} width={22} height={22} alt="tricks" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                ))}
                         </table>
                     </div>
 
@@ -266,7 +265,6 @@ const Cost = () => {
                     {/* flip  */}
 
                     <div className={TableStyle.flipBoxBack}>
-
 
                         <table className={TableStyle.customers} >
                             <thead>
@@ -277,7 +275,7 @@ const Cost = () => {
                                     <th>100 Locations</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody >
                                 <tr className="row">
                                     <td className=""><b>BrightLocal</b></td>
                                     <td className=""><b>£29/month or $290/year</b></td>
@@ -313,18 +311,16 @@ const Cost = () => {
                                 </tr>
                                 <tr className="row-6 even">
                                     <td className="column-1">Tribe Local</td>
-                                    <td className="column-1">From $87/month or $870/year	</td>
+                                    <td className="column-1">From $87/month or $870/year</td>
                                     <td className="column-2">From $150/month or $1,500/year	</td>
-                                    <td className="column-3">From $2,900/month or $29,000/year	</td>
+                                    <td className="column-3">From $2,900/month or $29,000/year</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-
         </div>
-    );
+    )
 };
-
 export default Cost;

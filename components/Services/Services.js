@@ -1,9 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 import style from "../../styles/layour.module.css";
-
 import Link from "next/link";
-
 import { urlFor } from "../../lib/sanity";
 
 
@@ -31,8 +29,7 @@ const Services = ({ services, services2, services3, services4, services5, servic
                             <Image src={urlFor(service.image).url()} width={650} height={400} alt="Picture of the author" />
                         </div>
                     </section>
-                ))
-            }
+                ))}
 
             {
                 services2.map((s) => (
@@ -54,8 +51,7 @@ const Services = ({ services, services2, services3, services4, services5, servic
                             </Link>
                         </div>
                     </section>
-                ))
-            }
+                ))}
 
 
             {
@@ -78,8 +74,7 @@ const Services = ({ services, services2, services3, services4, services5, servic
                             <Image src={urlFor(s.image).url()} width={600} height={350} alt="Picture of the author" />
                         </div>
                     </section>
-                ))
-            }
+                ))}
 
 
 
@@ -103,8 +98,7 @@ const Services = ({ services, services2, services3, services4, services5, servic
                             <Image src={urlFor(s.image).url()} width={600} height={350} alt="Picture of the author" />
                         </div>
                     </section>
-                ))
-            }
+                ))}
 
 
             {
@@ -127,8 +121,7 @@ const Services = ({ services, services2, services3, services4, services5, servic
                             <Image src={urlFor(s.image).url()} width={700} height={400} alt="Picture of the author" />
                         </div>
                     </section>
-                ))
-            }
+                ))}
 
 
             {
@@ -151,11 +144,7 @@ const Services = ({ services, services2, services3, services4, services5, servic
                             </Link>
                         </div>
                     </section>
-                ))
-            }
-
-
-
+                ))}
         </div>
     );
 };

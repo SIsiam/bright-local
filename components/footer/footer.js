@@ -1,141 +1,123 @@
 import React from 'react';
 import style from "../../styles/Footer.module.css";
-
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import InstagramIcon from '@material-ui/icons/Instagram';
 
-const Footer = () => {
+const Footer = ({ footer }) => {
     return (
         <div >
             <div className={style.layout}>
-                <section>
-                    <div className={style.title}>
-                        <h3>Products</h3>
-                    </div>
+                {
+                    footer.map((f) => (
+                        <section key={f._id}>
+                            <div className={style.title}>
+                                <h3>Products</h3>
+                            </div>
 
-                    <aside id="text-2"> <div className="textwidget">
-                        <ul className={style.list}>
-                            <li><a href="/platform/"><strong>Platform</strong></a></li>
-                            <li><a href="/local-seo-tools/">Local SEO Tools</a>
-                                <li><a href="/local-seo-tools/local-search-rank-checker/">Local Search Rank Checker</a></li>
-                                <li><a href="/local-seo-tools/citation-tracker/">Citation Tracker</a></li>
-                                <li><a href="/local-seo-tools/local-search-audit/">Local Search Audit</a></li>
-                                <li><a href="/local-seo-tools/google-my-business-audit/">Google My Business Audit</a></li>
-                            </li>
-                            <li><a href="/reputation-manager/">Reputation Manager</a>
-                                <li><a href="/reputation-manager/monitor-reviews/">Monitor Reviews</a></li>
-                                <li><a href="/reputation-manager/get-reviews/">Get Reviews</a></li>
-                                <li><a href="https://www.brightlocal.com/reputation-manager/showcase-reviews/">Showcase Reviews</a></li>
-                            </li>
-                            <li><a href="/citation-builder/">Citation Builder</a>
-                                <li><a href="/citation-builder/local-data-aggregators/">Data Aggregator Submissions</a></li>
-                                <li><a href="/citation-builder/yext-replacement-service/">Yext Replacement Service</a></li>
-                            </li>
-                            <li><a href="/lead-generation-for-marketing-agencies/">Agency Lead Generator</a></li>
-                            <li><a href="/pricing/">Plans and Pricing</a></li>
-                            <li><a href="https://tools.brightlocal.com/seo-tools/admin/login?email=demo@brightlocal.com&amp;password=demouser&amp;redirect_url=/seo-tools/admin/location-dashboard/location/412837/summary" target="_blank" rel="noopener noreferrer">Explore Our Demo Dashboard</a></li>
-                            <li><a href="https://www.brightlocal.com/agencies/">Agency</a>
-                                <li><a href="/white-label-seo-tools-reports/">White-Label Tools and Reporting</a></li>
-                            </li>
-                            <li><a href="https://www.brightlocal.com/multi-location/">Multi-location Business</a></li>
-                            <li><a href="https://www.brightlocal.com/small-businesses/">Small Business</a></li>
-                        </ul>
+                            <aside id="text-2"> <div className="textwidget">
+                                <ul className={style.list}>
+                                    <li><a href="/platform/"><strong>Platform</strong></a></li>
+                                    <li><a> {f.list1} </a></li>
+                                    <li><a> {f.list2} </a></li>
+                                    <li><a> {f.list3} </a></li>
+                                    <li><a> {f.list4} </a></li>
+                                    <li><a> {f.list5} </a></li>
+                                    <li><a> {f.list6} </a></li>
+                                    <li><a> {f.list7} </a></li>
+                                    <li><a> {f.list8} </a></li>
+                                    <li><a> {f.list9} </a></li>
+                                    <li><a> {f.list10} </a></li>
+                                    <li><a> {f.list11} </a></li>
+                                    <li><a> {f.list12} </a></li>
+                                    <li><a> {f.list13} </a></li>
+                                    <li><a> {f.list14} </a></li>
+                                    <li><a> {f.list15} </a></li>
+                                    <li><a> {f.list16} </a></li>
+                                </ul>
 
-                    </div>
-                    </aside>
+                            </div>
+                            </aside>
 
-                </section>
+                        </section>
+                    ))}
+                {
+                    footer.map((f) => (
+                        <section key={f._id}>
+                            <div className={style.title}>
+                                <h3>Company</h3>
+                            </div>
 
+                            <aside id="text-2"> <div className="textwidget">
+                                <ul className={style.list}>
+                                    <li><a href="/platform/"><strong>Solutions</strong></a></li>
+                                    <li><a> {f.list1} </a></li>
+                                    <li><a> {f.list2} </a></li>
+                                    <li><a> {f.list3} </a></li>
+                                    <li><a> {f.list4} </a></li>
+                                    <li><a> {f.list5} </a></li>
+                                    <li><a> {f.list6} </a></li>
+                                    <li><a> {f.list7} </a></li>
+                                    <li><a> {f.list8} </a></li>
+                                    <li><a> {f.list9} </a></li>
+                                    <li><a> {f.list10} </a></li>
+                                    <li><a> {f.list11} </a></li>
+                                    <li><a> {f.list12} </a></li>
+                                    <li><a> {f.list13} </a></li>
+                                    <li><a> {f.list14} </a></li>
+                                    <li><a> {f.list15} </a></li>
+                                    <li><a> {f.list16} </a></li>
+                                </ul>
 
+                            </div>
+                            </aside>
 
-                <section>
-                    <div className={style.title}>
-                        <h3>Company</h3>
-                    </div>
+                        </section>
+                    ))}
+                {
+                    footer.map((f) => (
+                        <section key={f._id}>
+                            <div className={style.title}>
+                                <h3>Community</h3>
+                            </div>
 
-                    <aside id="text-2" >
-                        <div className="textwidget">
-                            <ul className={style.list}>
-                                <li><a href="/platform/"><strong>Solutions</strong></a></li>
-                                <li><a href="/local-seo-tools/">Local SEO Tools</a>
-                                    <li><a href="/local-seo-tools/citation-tracker/">Citation Tracker</a></li>
-                                    <li><a href="/local-seo-tools/local-search-audit/">Local Search Audit</a></li>
-                                    <li><a href="/local-seo-tools/google-my-business-audit/">Google My Business Audit</a></li>
-                                </li>
-                                <li><a href="/reputation-manager/">Reputation Manager</a>
-                                    <li><a href="/reputation-manager/monitor-reviews/">Monitor Reviews</a></li>
-                                    <li><a href="/reputation-manager/get-reviews/">Get Reviews</a></li>
-                                    <li><a href="https://www.brightlocal.com/reputation-manager/showcase-reviews/">Showcase Reviews</a></li>
-                                </li>
-                                <li><a href="/citation-builder/">Citation Builder</a>
-                                    <li><a href="/citation-builder/local-data-aggregators/">Data Aggregator Submissions</a></li>
-                                    <li><a href="/citation-builder/yext-replacement-service/">Yext Replacement Service</a></li>
-                                </li>
-                                <li><a href="/lead-generation-for-marketing-agencies/">Agency Lead Generator</a></li>
-                                <li><a href="/pricing/">Plans and Pricing</a></li>
-                                <li><a href="https://tools.brightlocal.com/seo-tools/admin/login?email=demo@brightlocal.com&amp;password=demouser&amp;redirect_url=/seo-tools/admin/location-dashboard/location/412837/summary" target="_blank" rel="noopener noreferrer">Explore Our Demo Dashboard</a></li>
-                                <li><a href="https://www.brightlocal.com/agencies/">Agency</a>
-                                    <li><a href="/white-label-seo-tools-reports/">White-Label Tools and Reporting</a></li>
-                                </li>
-                                <li><a href="https://www.brightlocal.com/multi-location/">Multi-location Business</a></li>
-                                <li><a href="https://www.brightlocal.com/small-businesses/">Small Business</a></li>
-                            </ul>
+                            <aside id="text-2"> <div className="textwidget">
+                                <ul className={style.list}>
+                                    <li><a href="/platform/"><strong>Resources</strong></a></li>
+                                    <li><a> {f.list1} </a></li>
+                                    <li><a> {f.list2} </a></li>
+                                    <li><a> {f.list3} </a></li>
+                                    <li><a> {f.list4} </a></li>
+                                    <li><a> {f.list5} </a></li>
+                                    <li><a> {f.list6} </a></li>
+                                    <li><a> {f.list7} </a></li>
+                                    <li><a> {f.list8} </a></li>
+                                    <li><a> {f.list9} </a></li>
+                                    <li><a> {f.list10} </a></li>
+                                    <li><a> {f.list11} </a></li>
+                                    <li><a> {f.list12} </a></li>
+                                    <li><a> {f.list13} </a></li>
+                                    <li><a> {f.list14} </a></li>
+                                    <li><a> {f.list15} </a></li>
+                                    <li><a> {f.list16} </a></li>
+                                </ul>
 
-                        </div>
-                    </aside>
+                            </div>
+                            </aside>
 
-                </section>
-
-
-
-                <section>
-                    <div className={style.title}>
-                        <h3>Community</h3>
-                    </div>
-
-                    <aside id="text-2" >
-                        <div className="textwidget">
-                            <ul className={style.list}>
-                                <li><a href="/platform/"><strong>Resources</strong></a></li>
-                                <li><a href="/local-seo-tools/">Local SEO Tools</a>
-                                    <li><a href="/local-seo-tools/citation-tracker/">Citation Tracker</a></li>
-                                    <li><a href="/local-seo-tools/local-search-audit/">Local Search Audit</a></li>
-                                    <li><a href="/local-seo-tools/google-my-business-audit/">Google My Business Audit</a></li>
-                                </li>
-                                <li><a href="/reputation-manager/">Reputation Manager</a>
-                                    <li><a href="/reputation-manager/monitor-reviews/">Monitor Reviews</a></li>
-                                    <li><a href="/reputation-manager/get-reviews/">Get Reviews</a></li>
-                                    <li><a href="https://www.brightlocal.com/reputation-manager/showcase-reviews/">Showcase Reviews</a></li>
-                                </li>
-                                <li><a href="/citation-builder/">Citation Builder</a>
-                                    <li><a href="/citation-builder/local-data-aggregators/">Data Aggregator Submissions</a></li>
-                                    <li><a href="/citation-builder/yext-replacement-service/">Yext Replacement Service</a></li>
-                                </li>
-                                <li><a href="/lead-generation-for-marketing-agencies/">Agency Lead Generator</a></li>
-                                <li><a href="/pricing/">Plans and Pricing</a></li>
-                                <li><a href="https://tools.brightlocal.com/seo-tools/admin/login?email=demo@brightlocal.com&amp;password=demouser&amp;redirect_url=/seo-tools/admin/location-dashboard/location/412837/summary" target="_blank" rel="noopener noreferrer">Explore Our Demo Dashboard</a></li>
-                                <li><a href="https://www.brightlocal.com/agencies/">Agency</a>
-                                    <li><a href="/white-label-seo-tools-reports/">White-Label Tools and Reporting</a></li>
-                                </li>
-                                <li><a href="https://www.brightlocal.com/multi-location/">Multi-location Business</a></li>
-                                <li><a href="https://www.brightlocal.com/small-businesses/">Small Business</a></li>
-                            </ul>
-
-                        </div>
-                    </aside>
-                </section>
+                        </section>
+                    ))}
             </div>
 
             <hr />
             <section className="social">
-                <TwitterIcon style={{ width: '30px', height: '30px', color: '#547bba', borderRadius: '25px' }} />
-                <FacebookIcon style={{ width: '30px', height: '30px', color: '#547bba', borderRadius: '25px' }} />
-                <LinkedInIcon style={{ width: '30px', height: '30px', color: '#547bba', borderRadius: '25px' }} />
-                <InstagramIcon style={{ width: '30px', height: '30px', color: '#547bba', borderRadius: '25px' }} />
-                <YouTubeIcon style={{ width: '30px', height: '30px', color: '#547bba', borderRadius: '25px' }} />
+                <TwitterIcon style={{ width: '40px', padding: '7px', height: '40px', background: '#547bba', color: '#fff', borderRadius: '25px', cursor: 'pointer', borderRadius: '50px' }} />
+                <FacebookIcon style={{ width: '40px', padding: '7px', height: '40px', background: '#547bba', color: '#fff', borderRadius: '25px', cursor: 'pointer', borderRadius: '50px' }} />
+                <LinkedInIcon style={{ width: '40px', padding: '7px', height: '40px', background: '#547bba', color: '#fff', borderRadius: '25px', cursor: 'pointer', borderRadius: '50px' }} />
+                <InstagramIcon style={{ width: '40px', padding: '7px', height: '40px', background: '#547bba', color: '#fff', borderRadius: '25px', cursor: 'pointer', borderRadius: '50px' }} />
+                <YouTubeIcon style={{ width: '40px', padding: '7px', height: '40px', background: '#547bba', color: '#fff', borderRadius: '25px', cursor: 'pointer', borderRadius: '50px' }} />
             </section>
             <hr />
         </div>

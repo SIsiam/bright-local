@@ -3,7 +3,6 @@ import Link from "next/link";
 import { urlFor } from "../../lib/sanity";
 
 const Header = ({ headers }) => {
-    console.log(headers);
     return (
         <div>
             {
