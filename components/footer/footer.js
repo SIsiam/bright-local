@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from "next/image";
 import style from "../../styles/Footer.module.css";
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
@@ -17,7 +18,7 @@ const Footer = ({ footer }) => {
                                 <h3>Products</h3>
                             </div>
 
-                            <aside id="text-2"> <div className="textwidget">
+                            <aside id="text-2"> <div className={style.hypen}>
                                 <ul className={style.list}>
                                     <li><a href="/platform/"><strong>Platform</strong></a></li>
                                     <li><a> {f.list1} </a></li>
@@ -50,7 +51,7 @@ const Footer = ({ footer }) => {
                                 <h3>Company</h3>
                             </div>
 
-                            <aside id="text-2"> <div className="textwidget">
+                            <aside id="text-2"> <div >
                                 <ul className={style.list}>
                                     <li><a href="/platform/"><strong>Solutions</strong></a></li>
                                     <li><a> {f.list1} </a></li>
@@ -110,16 +111,18 @@ const Footer = ({ footer }) => {
                         </section>
                     ))}
             </div>
-
             <hr />
             <section className="social">
-                <TwitterIcon style={{ width: '40px', padding: '7px', height: '40px', background: '#547bba', color: '#fff', borderRadius: '25px', cursor: 'pointer', borderRadius: '50px' }} />
-                <FacebookIcon style={{ width: '40px', padding: '7px', height: '40px', background: '#547bba', color: '#fff', borderRadius: '25px', cursor: 'pointer', borderRadius: '50px' }} />
-                <LinkedInIcon style={{ width: '40px', padding: '7px', height: '40px', background: '#547bba', color: '#fff', borderRadius: '25px', cursor: 'pointer', borderRadius: '50px' }} />
-                <InstagramIcon style={{ width: '40px', padding: '7px', height: '40px', background: '#547bba', color: '#fff', borderRadius: '25px', cursor: 'pointer', borderRadius: '50px' }} />
-                <YouTubeIcon style={{ width: '40px', padding: '7px', height: '40px', background: '#547bba', color: '#fff', borderRadius: '25px', cursor: 'pointer', borderRadius: '50px' }} />
+                <TwitterIcon style={{ width: '40px', margin: '4px 12px', padding: '7px', height: '40px', background: '#547bba', color: '#fff', borderRadius: '25px', cursor: 'pointer', margin: '4px 12px', borderRadius: '50px' }} />
+                <FacebookIcon style={{ width: '40px', margin: '4px 12px', padding: '7px', height: '40px', background: '#547bba', color: '#fff', borderRadius: '25px', cursor: 'pointer', borderRadius: '50px' }} />
+                <LinkedInIcon style={{ width: '40px', margin: '4px 12px', padding: '7px', height: '40px', background: '#547bba', color: '#fff', borderRadius: '25px', cursor: 'pointer', borderRadius: '50px' }} />
+                <InstagramIcon style={{ width: '40px', margin: '4px 12px', padding: '7px', height: '40px', background: '#547bba', color: '#fff', borderRadius: '25px', cursor: 'pointer', borderRadius: '50px' }} />
+                <YouTubeIcon style={{ width: '40px', margin: '4px 12px', padding: '7px', height: '40px', background: '#547bba', color: '#fff', borderRadius: '25px', cursor: 'pointer', borderRadius: '50px' }} />
             </section>
             <hr />
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '7px', }}>
+                <Image src="https://brightlocal-corp-assets.s3.amazonaws.com/2019/04/brightlocal_logo.svg" alt="" width={180} height={70} className="alignnone size-full wp-image-1716" />
+            </div>
         </div>
     );
 };

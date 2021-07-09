@@ -133,12 +133,12 @@ body {
 .social {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  /* justify-content: center; */
+  margin-left: 500px;
   align-items: center;
-  margin: 0 20% 0 30%;
+  /* margin: 0 20% 0 30%; */
   padding: 10px;
 }
-
 
 .checkbox {
 	opacity: 0;
