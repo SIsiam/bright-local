@@ -1,15 +1,15 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import NavBar from "../components/Navigation/Nav";
-import Header from "../components/Header/Header";
-import Sponsor from '../components/Sponsor/Sponsor';
-import Services from '../components/Services/Services';
-import Cost from '../components/Cost/Cost';
-import Trial from '../components/Trial/Trial';
-import HeroCard from '../components/HeroCard/HeroCard';
-import Medel from '../components/Medel/Medel';
-import Footer from '../components/Footer/Footer';
-import Status from '../components/Status/Status';
+import NavBar from "../Components/Navigation/Nav";
+import Header from "../Components/Header/Header";
+import Sponsor from '../Components/Sponsor/Sponsor';
+import Services from '../Components/Services/Services';
+import Cost from '../Components/Cost/Cost';
+import Trial from '../Components/Trial/Trial';
+import HeroCard from '../Components/HeroCard/HeroCard';
+import Medel from '../Components/Medel/Medel';
+import Footer from '../Components/Footer/Footer';
+import Status from '../Components/Status/Status';
 
 
 import { sanityClient, urlFor } from "../lib/sanity";

@@ -12,10 +12,10 @@ const Services = ({ services, services2, services3, services4, services5, servic
             {
                 services.map((service) => (
                     <section className={style.singleContainer} key={service._id}>
-                        <div className="" >
+                        <div >
                             <h4 style={{ color: '#a5c559' }}>{service.name}</h4>
                             <h1 style={{ fontSize: '26px' }}>{service.heading}</h1>
-                            <div style={{ fontSize: '18px', fontWeight: '500', lineHeight: '35px', marginBottom: '13px' }}>
+                            <div style={{ fontSize: '17px', fontWeight: '600', lineHeight: '35px', marginBottom: '13px' }}>
                                 <li>{service.list1}</li>
                                 <li>{service.list2}</li>
                                 <li>{service.list3}</li>
@@ -40,7 +40,7 @@ const Services = ({ services, services2, services3, services4, services5, servic
                         <div className="" >
                             <h4 style={{ color: '#a5c559' }}>{s.name}</h4>
                             <h1 style={{ fontSize: '26px' }}>{s.heading}</h1>
-                            <div style={{ fontSize: '18px', fontWeight: '500', lineHeight: '35px', marginBottom: '13px' }}>
+                            <div style={{ fontSize: '17px', fontWeight: '600', lineHeight: '35px', marginBottom: '13px' }}>
                                 <li>{s.list1}</li>
                                 <li>{s.list2}</li>
                                 <li>{s.list3}</li>
@@ -60,7 +60,7 @@ const Services = ({ services, services2, services3, services4, services5, servic
                         <div className="" >
                             <h4 style={{ color: '#a5c559' }}>{s.name}</h4>
                             <h1 style={{ fontSize: '26px' }}>{s.heading}</h1>
-                            <div style={{ fontSize: '18px', fontWeight: '500', lineHeight: '35px', marginBottom: '13px' }}>
+                            <div style={{ fontSize: '17px', fontWeight: '600', lineHeight: '35px', marginBottom: '13px' }}>
                                 <li>{s.list1}</li>
                                 <li>{s.list2}</li>
                                 <li>{s.list3}</li>
@@ -84,7 +84,7 @@ const Services = ({ services, services2, services3, services4, services5, servic
                         <div className="" >
                             <h4 style={{ color: '#a5c559' }}>{s.name}</h4>
                             <h1 style={{ fontSize: '26px' }}>{s.heading}</h1>
-                            <div style={{ fontSize: '18px', fontWeight: '500', lineHeight: '35px', marginBottom: '13px' }}>
+                            <div style={{ fontSize: '17px', fontWeight: '600', lineHeight: '35px', marginBottom: '13px' }}>
                                 <li>{s.list1}</li>
                                 <li>{s.list2}</li>
                                 <li>{s.list3}</li>
@@ -107,7 +107,7 @@ const Services = ({ services, services2, services3, services4, services5, servic
                         <div className="" >
                             <h4 style={{ color: '#a5c559' }}>{s.name}</h4>
                             <h1 style={{ fontSize: '26px' }}>{s.heading}</h1>
-                            <div style={{ fontSize: '18px', fontWeight: '500', lineHeight: '35px', marginBottom: '13px' }}>
+                            <div style={{ fontSize: '17px', fontWeight: '600', lineHeight: '35px', marginBottom: '13px' }}>
                                 <li>{s.list1}</li>
                                 <li>{s.list2}</li>
                                 <li>{s.list3}</li>
@@ -133,7 +133,7 @@ const Services = ({ services, services2, services3, services4, services5, servic
                         <div className="" >
                             <h4 style={{ color: '#a5c559' }}>{s.name}</h4>
                             <h1 style={{ fontSize: '26px' }}>{s.heading}</h1>
-                            <div style={{ fontSize: '18px', fontWeight: '500', lineHeight: '35px', marginBottom: '13px' }}>
+                            <div style={{ fontSize: '17px', fontWeight: '600', lineHeight: '35px', marginBottom: '13px' }}>
                                 <li>{s.list1}</li>
                                 <li>{s.list2}</li>
                                 <li>{s.list3}</li>
